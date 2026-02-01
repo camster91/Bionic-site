@@ -1,0 +1,70 @@
+<%- include('../partials/header') %>
+
+<!-- Dashboard Header -->
+<section class="dashboard-header">
+    <div class="container">
+        <div class="dashboard-welcome">
+            <h1>Welcome<%= client && client.company ? ', ' + client.company : '' %></h1>
+            <p>Logged in as: <%= client ? client.username : 'Unknown' %></p>
+        </div>
+        <a href="/portal/logout" class="btn btn-secondary btn-small">Sign Out</a>
+    </div>
+</section>
+
+<!-- Dashboard Content -->
+<section class="dashboard-content">
+    <div class="container">
+        <div class="dashboard-grid">
+            <!-- Quick Actions -->
+            <div class="dashboard-card main-action">
+                <div class="card-icon">&#128203;</div>
+                <h2>Submit Purchase Order</h2>
+                <p>Ready to place an order? Submit your purchase order through our secure form.</p>
+                <a href="/portal/order" class="btn btn-primary">New Order</a>
+            </div>
+
+            <!-- Order History Placeholder -->
+            <div class="dashboard-card">
+                <div class="card-icon">&#128197;</div>
+                <h3>Order History</h3>
+                <p>View your past orders and their status.</p>
+                <div class="placeholder-content">
+                    <p class="muted">No recent orders to display</p>
+                </div>
+            </div>
+
+            <!-- Documents Placeholder -->
+            <div class="dashboard-card">
+                <div class="card-icon">&#128196;</div>
+                <h3>Documents</h3>
+                <p>Access COAs, spec sheets, and other documents.</p>
+                <div class="placeholder-content">
+                    <p class="muted">No documents available</p>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="dashboard-card">
+                <div class="card-icon">&#128172;</div>
+                <h3>Need Help?</h3>
+                <p>Contact our support team for assistance with your orders or account.</p>
+                <a href="/contact" class="btn btn-outline btn-small">Contact Support</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info Section -->
+<section class="dashboard-info">
+    <div class="container">
+        <div class="info-banner">
+            <div class="info-content">
+                <h3>Production Timeline</h3>
+                <p>Standard production time is 6-8 weeks from order confirmation. For rush orders, please contact us directly.</p>
+            </div>
+            <a href="/contact" class="btn btn-secondary btn-small">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

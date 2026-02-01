@@ -1,0 +1,140 @@
+<%- include('partials/header') %>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Careers</h1>
+        <p>Join our team at Botanic and help shape the future of nutraceutical manufacturing</p>
+    </div>
+</section>
+
+<% if (applicationSent) { %>
+<!-- Application Success -->
+<section class="application-success">
+    <div class="container">
+        <div class="success-content">
+            <div class="success-icon">&#10003;</div>
+            <h2>Application Submitted!</h2>
+            <p>Thank you for your interest in joining Botanic. We've received your application and will review it carefully. If your qualifications match our needs, we'll be in touch within 5-7 business days.</p>
+            <a href="/" class="btn btn-primary">Return Home</a>
+        </div>
+    </div>
+</section>
+<% } else { %>
+
+<!-- Why Work Here -->
+<section class="why-work-here">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Work at Botanic?</h2>
+            <p>Be part of a growing team in the nutraceutical industry</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">&#127793;</div>
+                <h3>Growing Industry</h3>
+                <p>Join a rapidly expanding sector with excellent career growth opportunities.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#128101;</div>
+                <h3>Great Team</h3>
+                <p>Work alongside dedicated professionals who are passionate about quality.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#128200;</div>
+                <h3>Career Development</h3>
+                <p>We invest in our team with training and advancement opportunities.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#127968;</div>
+                <h3>Local Community</h3>
+                <p>Proudly based in Carroll County, Georgia, serving our local community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Open Positions -->
+<section class="open-positions">
+    <div class="container">
+        <div class="section-header">
+            <h2>Open Positions</h2>
+            <p>Current opportunities at our Carroll County facility</p>
+        </div>
+        <% if (positions && positions.length > 0) { %>
+        <div class="positions-list">
+            <% positions.forEach(function(position) { %>
+            <div class="position-card">
+                <div class="position-header">
+                    <h3><%= position.title %></h3>
+                    <span class="position-type"><%= position.type %></span>
+                </div>
+                <p><%= position.description %></p>
+                <a href="#application-form" class="btn btn-primary btn-small">Apply Now</a>
+            </div>
+            <% }); %>
+        </div>
+        <% } else { %>
+        <div class="no-positions">
+            <p>No specific positions are currently listed, but we're always looking for talented individuals. Submit your application below and we'll keep your information on file.</p>
+        </div>
+        <% } %>
+    </div>
+</section>
+
+<!-- Application Form -->
+<section id="application-form" class="application-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Submit Your Application</h2>
+            <p>Fill out the form below to apply for a position at Botanic</p>
+        </div>
+        <div class="application-form-container">
+            <form class="application-form" action="/careers/apply" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position Applying For *</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select a position</option>
+                            <option value="Production Operator">Production Operator</option>
+                            <option value="Quality Control Technician">Quality Control Technician</option>
+                            <option value="Warehouse Associate">Warehouse Associate</option>
+                            <option value="General Application">General Application</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Relevant Experience *</label>
+                    <textarea id="experience" name="experience" rows="4" required placeholder="Briefly describe your relevant work experience, skills, and qualifications..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="coverLetter">Why do you want to work at Botanic?</label>
+                    <textarea id="coverLetter" name="coverLetter" rows="4" placeholder="Tell us why you're interested in this position and what you would bring to our team..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Upload Resume (PDF, DOC, DOCX - Max 5MB) *</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<% } %>
+
+<%- include('partials/footer') %>

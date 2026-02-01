@@ -3,13 +3,13 @@
 <section class="error-page">
     <div class="container">
         <div class="error-content">
-            <div class="error-icon">&#127807;</div>
-            <h1>404</h1>
-            <h2>Page Not Found</h2>
-            <p>The page you're looking for doesn't exist or has been moved.</p>
+            <div class="error-icon">&#9888;</div>
+            <h1>Error</h1>
+            <h2>Something Went Wrong</h2>
+            <p><%= message || 'An unexpected error occurred. Please try again later.' %></p>
             <div class="error-actions">
                 <a href="/" class="btn btn-primary">Go Home</a>
-                <a href="/contact" class="btn btn-secondary">Contact Us</a>
+                <a href="/contact" class="btn btn-secondary">Contact Support</a>
             </div>
         </div>
     </div>
