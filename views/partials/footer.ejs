@@ -1,0 +1,54 @@
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Bionic Botanics</h3>
+                    <p>Bringing nature into your home with beautiful, healthy plants carefully curated for modern living.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/products">Our Plants</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Plant Care</h4>
+                    <ul>
+                        <li><a href="#">Care Guides</a></li>
+                        <li><a href="#">Watering Tips</a></li>
+                        <li><a href="#">Light Requirements</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Pinterest">PIN</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                    </div>
+                    <p class="contact-info">
+                        <strong>Email:</strong> hello@bionicbotanics.com<br>
+                        <strong>Phone:</strong> (555) 123-4567
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Bionic Botanics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

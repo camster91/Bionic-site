@@ -1,0 +1,152 @@
+<%- include('partials/header') %>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Our Plants</h1>
+        <p>Explore our curated collection of beautiful, healthy plants</p>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="products-filter">
+    <div class="container">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Plants</button>
+            <button class="filter-btn" data-filter="indoor">Indoor Plants</button>
+            <button class="filter-btn" data-filter="hanging">Hanging Plants</button>
+            <button class="filter-btn" data-filter="flowering">Flowering Plants</button>
+            <button class="filter-btn" data-filter="succulents">Succulents</button>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section class="products-section">
+    <div class="container">
+        <div class="products-grid">
+            <% products.forEach(function(product) { %>
+            <div class="product-card" data-category="<%= product.category.toLowerCase().replace(' ', '-') %>">
+                <div class="product-image">
+                    <div class="image-placeholder product">
+                        <span>&#127793;</span>
+                    </div>
+                    <div class="product-overlay">
+                        <button class="btn btn-small">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category"><%= product.category %></span>
+                    <h3><%= product.name %></h3>
+                    <p><%= product.description %></p>
+                    <div class="product-footer">
+                        <span class="price">$<%= product.price.toFixed(2) %></span>
+                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Plant Care Tips -->
+<section class="care-tips">
+    <div class="container">
+        <div class="section-header">
+            <h2>Plant Care Tips</h2>
+            <p>Help your new plant thrive with these essential tips</p>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">&#128167;</div>
+                <h3>Watering</h3>
+                <p>Most indoor plants prefer their soil to dry out slightly between waterings. Overwatering is the most common cause of plant death.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">&#9728;</div>
+                <h3>Light</h3>
+                <p>Different plants have different light needs. Check your plant's requirements and place it accordingly for best growth.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">&#127777;</div>
+                <h3>Temperature</h3>
+                <p>Most houseplants prefer temperatures between 60-75°F (15-24°C). Avoid placing plants near drafts or heating vents.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">&#128166;</div>
+                <h3>Humidity</h3>
+                <p>Tropical plants love humidity. Group plants together or use a humidifier to increase moisture levels.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose">
+    <div class="container">
+        <div class="choose-grid">
+            <div class="choose-content">
+                <h2>Why Choose Bionic Botanics?</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <span class="check">&#10003;</span>
+                        <span>Hand-selected, premium quality plants</span>
+                    </li>
+                    <li>
+                        <span class="check">&#10003;</span>
+                        <span>Sustainable packaging and shipping</span>
+                    </li>
+                    <li>
+                        <span class="check">&#10003;</span>
+                        <span>30-day health guarantee</span>
+                    </li>
+                    <li>
+                        <span class="check">&#10003;</span>
+                        <span>Free care guide with every purchase</span>
+                    </li>
+                    <li>
+                        <span class="check">&#10003;</span>
+                        <span>Expert support available 7 days a week</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="choose-image">
+                <div class="image-placeholder large">
+                    <span>&#127808;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            // Filter products
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const category = card.dataset.category;
+                    if (category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<%- include('partials/footer') %>
