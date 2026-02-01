@@ -1,0 +1,68 @@
+<%- include('../partials/header') %>
+
+<!-- Login Section -->
+<section class="login-section">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-icon">&#128274;</div>
+                    <h1>Client Portal</h1>
+                    <p>Sign in to access your account and submit purchase orders</p>
+                </div>
+
+                <% if (error) { %>
+                <div class="error-message">
+                    <span>&#9888;</span> <%= error %>
+                </div>
+                <% } %>
+
+                <form class="login-form" action="/portal/login" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="/contact">Contact us</a> to become a client.</p>
+                    <p>Forgot your password? <a href="/contact">Get help</a></p>
+                </div>
+            </div>
+
+            <div class="login-info">
+                <h2>Client Benefits</h2>
+                <ul>
+                    <li>
+                        <span class="benefit-icon">&#128203;</span>
+                        <div>
+                            <strong>Submit Purchase Orders</strong>
+                            <p>Easily place orders through our secure portal</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="benefit-icon">&#128200;</span>
+                        <div>
+                            <strong>Track Orders</strong>
+                            <p>Monitor your order status in real-time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="benefit-icon">&#128196;</span>
+                        <div>
+                            <strong>Access Documents</strong>
+                            <p>View COAs and production records</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

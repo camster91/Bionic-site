@@ -1,0 +1,57 @@
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Botanic</h3>
+                    <p>Contract nutraceutical manufacturing with precision and care. FDA registered and GMP certified facility in Carroll County, Georgia.</p>
+                    <div class="footer-badges">
+                        <span class="badge">FDA Registered</span>
+                        <span class="badge">GMP Certified</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/certifications">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services#capsules">Capsule Manufacturing</a></li>
+                        <li><a href="/services#powders">Powder Blending</a></li>
+                        <li><a href="/services#liquids">Liquid Products</a></li>
+                        <li><a href="/portal/login">Client Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="contact-info">
+                        <strong>Email:</strong> info@botanic-mfg.com<br>
+                        <strong>Phone:</strong> (770) 555-0123<br>
+                        <strong>Location:</strong> Carroll County, GA
+                    </p>
+                    <a href="/contact" class="btn btn-outline btn-small">Get in Touch</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Botanic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                document.querySelector('.main-nav').classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
