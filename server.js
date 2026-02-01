@@ -303,7 +303,12 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`Botanic server running at http://localhost:${PORT}`);
-});
+// Start server (only when not running as serverless function)
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Botanic server running at http://localhost:${PORT}`);
+    });
+}
+
+// Export for Vercel serverless
+module.exports = app;
