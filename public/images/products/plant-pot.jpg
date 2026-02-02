@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pot -->
+  <ellipse cx="200" cy="220" rx="80" ry="40" fill="#8D6E63"/>
+  <ellipse cx="200" cy="210" rx="80" ry="40" fill="#A1887F"/>
+  
+  <!-- Soil -->
+  <ellipse cx="200" cy="215" rx="75" ry="30" fill="#5D4037"/>
+  
+  <!-- Plant -->
+  <g id="plant">
+    <!-- Stem -->
+    <rect x="195" y="120" width="10" height="90" fill="#8D6E63"/>
+    
+    <!-- Leaves -->
+    <ellipse cx="185" cy="140" rx="25" ry="15" fill="#66BB6A" transform="rotate(-20 185 140)"/>
+    <ellipse cx="215" cy="140" rx="25" ry="15" fill="#81C784" transform="rotate(20 215 140)"/>
+    <ellipse cx="175" cy="160" rx="20" ry="12" fill="#4CAF50" transform="rotate(-30 175 160)"/>
+    <ellipse cx="225" cy="160" rx="20" ry="12" fill="#66BB6A" transform="rotate(30 225 160)"/>
+    <ellipse cx="165" cy="180" rx="18" ry="10" fill="#81C784" transform="rotate(-40 165 180)"/>
+    <ellipse cx="235" cy="180" rx="18" ry="10" fill="#4CAF50" transform="rotate(40 235 180)"/>
+  </g>
+  
+  <!-- Water droplet -->
+  <circle cx="220" cy="260" r="8" fill="#03A9F4" opacity="0.7"/>
+</svg>

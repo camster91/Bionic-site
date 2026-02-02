@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge ribbon background -->
+  <path d="M6 12 C6 8.686 8.686 6 12 6 L36 6 C39.314 6 42 8.686 42 12 L42 30 C42 33.314 39.314 36 36 36 L13.5 36 L6 43.5 V36 H12 C15.314 36 18 33.314 18 30 C18 26.686 15.314 24 12 24 C8.686 24 6 26.686 6 30 L6 12 Z" fill="#4CAF50"/>
+  
+  <!-- Ribbon folds -->
+  <path d="M6 12 L12 18 L6 24 Z" fill="#388E3C"/>
+  <path d="M42 12 L36 18 L42 24 Z" fill="#388E3C"/>
+  
+  <!-- Certificate seal -->
+  <circle cx="24" cy="21" r="8" fill="white"/>
+  <circle cx="24" cy="21" r="6" fill="#E8F5E9"/>
+  
+  <!-- Checkmark on certificate -->
+  <path d="M20 21 L23 24 L28 19" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

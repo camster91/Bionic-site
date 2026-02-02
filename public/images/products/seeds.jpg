@@ -1,0 +1,30 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seed packet background -->
+  <rect x="125" y="100" width="150" height="200" fill="#E8F5E9" stroke="#4CAF50" stroke-width="4" rx="10"/>
+  
+  <!-- Seed packet flap -->
+  <polygon points="125,100 200,80 275,100 200,120" fill="#81C784" stroke="#4CAF50" stroke-width="4"/>
+  
+  <!-- Seeds inside -->
+  <circle cx="175" cy="150" r="8" fill="#8D6E63"/>
+  <circle cx="225" cy="150" r="8" fill="#8D6E63"/>
+  <circle cx="175" cy="180" r="8" fill="#8D6E63"/>
+  <circle cx="225" cy="180" r="8" fill="#8D6E63"/>
+  <circle cx="175" cy="210" r="8" fill="#8D6E63"/>
+  <circle cx="225" cy="210" r="8" fill="#8D6E63"/>
+  <circle cx="175" cy="240" r="8" fill="#8D6E63"/>
+  <circle cx="225" cy="240" r="8" fill="#8D6E63"/>
+  <circle cx="175" cy="270" r="8" fill="#8D6E63"/>
+  <circle cx="225" cy="270" r="8" fill="#8D6E63"/>
+  
+  <!-- Label on flap -->
+  <text x="200" y="95" font-family="Arial" font-weight="bold" font-size="16" text-anchor="middle" fill="#2E7D32">SEEDS</text>
+  
+  <!-- Main label -->
+  <text x="200" y="170" font-family="Arial" font-weight="bold" font-size="24" text-anchor="middle" fill="#2E7D32">ORGANIC</text>
+  <text x="200" y="200" font-family="Arial" font-weight="bold" font-size="24" text-anchor="middle" fill="#2E7D32">SEEDS</text>
+  
+  <!-- Additional info -->
+  <text x="200" y="240" font-family="Arial" font-size="14" text-anchor="middle" fill="#558B2F">Non-GMO • Heirloom</text>
+  <text x="200" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="#558B2F">100% Pure</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Certificate border -->
+  <rect x="50" y="50" width="300" height="200" fill="#FFFDE7" stroke="#FBC02D" stroke-width="8" rx="10"/>
+  
+  <!-- Seal -->
+  <circle cx="200" cy="150" r="60" fill="#FFA000" stroke="#FF8F00" stroke-width="4"/>
+  
+  <!-- Organic leaf symbol -->
+  <path d="M200 120 Q160 140 180 180 Q200 160 220 180 Q200 140 200 120" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="200" y="100" font-family="Arial" font-weight="bold" font-size="24" text-anchor="middle" fill="#333">ORGANIC</text>
+  <text x="200" y="130" font-family="Arial" font-weight="bold" font-size="24" text-anchor="middle" fill="#333">CERTIFIED</text>
+  
+  <!-- Date -->
+  <text x="200" y="200" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">Issued: 2026</text>
+  
+  <!-- Signature line -->
+  <line x1="120" y1="220" x2="280" y2="220" stroke="#999" stroke-width="2"/>
+  <text x="200" y="240" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">Certifying Authority</text>
+</svg>

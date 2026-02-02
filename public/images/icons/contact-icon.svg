@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Envelope background -->
+  <path d="M6 12 C6 8.686 8.686 6 12 6 L36 6 C39.314 36 36 42 36 42 L6 42 C6 36 8.686 42 12 42 L36 42 C39.314 42 42 39.314 42 36 L42 12 C42 8.686 39.314 6 36 6 L12 6 C8.686 6 6 8.686 6 12 Z" fill="#607D8B"/>
+  
+  <!-- Envelope flap -->
+  <path d="M6 12 L24 24 L42 12" fill="white"/>
+  
+  <!-- Envelope body -->
+  <path d="M6 18 L24 30 L42 18" fill="#90A4AE"/>
+</svg>
